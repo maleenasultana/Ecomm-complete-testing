@@ -1,28 +1,30 @@
-/**
- * this file will be used to represent the category schema
- * 
- * category fields:
- * 1.id
- * 2.name
- * 3.description
- */
-const {sequelize, Sequelize}=require(".");
 
-module.exports=(sequelize,Sequelize)=>{
-
-const Category = Sequelize.define("category",{
-      id: {
-            type:Sequelize.INTEGER,
-            primarykey: true,
-            autoIncrement:true
-      },
-      name: {
-            type: Sequelize.STRING,
-            allowNull: false
-      },
-      description: {
-            type: Sequelize.STRING
-      }
-   });
- return Category;
-}
+module.exports = (sequelize, Sequelize) => {
+      const Category = sequelize.define("category", {
+          id: {
+              type: Sequelize.INTEGER,
+              primaryKey: true,
+              autoIncrement: true
+          },
+          name: {
+              type: Sequelize.STRING,
+              allowNull: false
+          },
+          description: {
+              type: Sequelize.STRING
+          },
+          
+      },{
+          tableName: 'categories'
+           
+          /**
+           * This helps you to provie a custom name to the table
+           * If above is not provided, model name is converted into plural and set as the table name
+           * 
+           * If we want to just use the model name provided, we can provide the below option :
+           * 
+           * freezeTableName: true
+           */
+      });
+      return Category;
+  }

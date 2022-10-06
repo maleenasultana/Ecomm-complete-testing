@@ -1,0 +1,21 @@
+Node.js based eCommerceApp
+Backend code base
+This eCommerceApp will be built as the part of first app building excercise in module 1 of the Relevel backend and fullstack course
+
+Features
+Create the REST APIs for categories
+Create the REST APIs for Products
+Adding the search capabilities on products
+Using middleware for validation
+Creating authenticated Order APIs
+Unit Testing the eCommerce Applications
+How is the code organized in this repo ?
+Separate branch for separare class. For example, code to be taugh in the session1 planned for eCommerce app is available in the branch name session1
+
+Tech
+Node.js
+Express.js
+Sequelize ( ORM )
+MySQL
+JWT
+Jest
